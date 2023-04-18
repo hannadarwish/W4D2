@@ -1,6 +1,5 @@
 require_relative "Board"
 
-
 class Piece
 
     attr_reader :color
