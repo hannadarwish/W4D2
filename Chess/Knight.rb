@@ -11,7 +11,8 @@ class Knight < Piece
 
     def move_in_dir
         KNIGHT_DIRS.each do |dirs|
-            @possible_moves += dirs
+            x, y = dirs
+            @possible_moves += moves(x, y)
         end
     end
 

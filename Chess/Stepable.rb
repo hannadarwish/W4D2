@@ -19,15 +19,16 @@ module Stepable
     [-1, -2],
     [-2, -1] ]
 
-    def moves(dirs)
-        @pos[0] += dirs[0]
-        @pos[1] += dirs[1]
+    def moves(x, y)
+        current_x, current_y = pos
+        current_x += x
+        current_y += y
         temp_moves = []
-        if (@pos[0].between?(0,7) && @pos[1].between?(0,7))
-            if board[@pos].is_a?(NullPiece) 
-                temp_moves << @pos
-            elsif self.color != board[@pos].color
-                temp_moves << @pos
+        if (current_x.between?(0,7) && current_y.between?(0,7))
+            if board[[current_x, current_y]].is_a?(NullPiece) 
+                temp_moves << [current_x, current_y]  
+            elsif self.color != board[[current_x, current_y]].color
+                temp_moves << [current_x, current_y]  
             end
         end
         return temp_moves

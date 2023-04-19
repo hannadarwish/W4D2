@@ -12,7 +12,7 @@ class Rook < Piece
 
     def move_in_dir
         HORIZONTAL_DIRS.each do |dirs|
-            x, y =dirs
+            x, y = dirs
             @possible_moves += moves(x, y)
         end
     end
