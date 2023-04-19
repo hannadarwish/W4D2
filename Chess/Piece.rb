@@ -9,5 +9,11 @@ class Piece
         @pos = pos
     end
 
+    def to_s()
+    
+    end
+
+    def valid_
+
 
 end
