@@ -20,11 +20,10 @@ module Stepable
     [-2, -1] ]
 
     def moves(dirs)
-        x, y = @pos
-        x += dirs[0]
-        y += dirs[1]
+        @pos[0] += dirs[0]
+        @pos[1] += dirs[1]
         temp_moves = []
-        if (x.between?(0,7) && y.between?(0,7))
+        if (@pos[0].between?(0,7) && @pos[1].between?(0,7))
             if board[@pos].is_a?(NullPiece) 
                 temp_moves << @pos
             elsif self.color != board[@pos].color

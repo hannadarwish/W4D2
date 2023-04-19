@@ -15,8 +15,7 @@ class Pawn < Piece
     end
 
     def at_start_row?
-        x, y = @pos 
-        if (self.color == :B && x == 1) || (self.color == :W && x == 6)
+        if (self.color == :B && @pos[0] == 1) || (self.color == :W && @pos[0] == 6)
             return true
         end
     false
@@ -46,17 +45,15 @@ class Pawn < Piece
     end
 
     def moves
-        x, y = @pos
-
         direction = self.forward_dir
-        x += direction[0]
+        @pos[0] += direction[0]
 
         if board[@pos].is_a?(NullPiece)
             @possible_moves << @pos
         end
 
         if at_start_row?
-            x += direction[0]
+            @pos[0] += direction[0]
             if board[@pos].is_a?(NullPiece)
                 @possible_moves << @pos
             end

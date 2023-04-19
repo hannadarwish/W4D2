@@ -7,6 +7,11 @@ class Bishop < Piece
     include Slideable
     @possible_moves = []
 
+    def initialize(color, board, pos)
+        super 
+        @possible_moves = []
+    end
+
     def move_in_dir
         DIAGONAL_DIRS.each do |dirs|
             @possible_moves += moves(dirs)

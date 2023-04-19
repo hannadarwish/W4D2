@@ -7,11 +7,7 @@ class Board
     attr_reader :rows
     def initialize 
         @null_piece = NullPiece.instance
-        black = Array.new(2) {Array.new(8) {Piece.new(:B)}} 
-        blank = Array.new(4) {Array.new(8, @null_piece)} 
-        white = Array.new(2) {Array.new(8) {Piece.new(:W)}} 
-        @rows = black + blank + white
-
+        @rows = Array.new(8) {Array.new(8, @null_piece)} 
     end
     
 
