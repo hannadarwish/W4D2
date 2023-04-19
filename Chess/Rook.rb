@@ -10,4 +10,8 @@ class Rook < Piece
         @possible_moves += moves(dirs)
     end
 
+    def symbol
+        "♖"
+    end
+
 end
