@@ -10,9 +10,17 @@ class Rook < Piece
         @possible_moves = []
     end
 
-    HORIZONTAL_DIRS.each do |dirs|
-        @possible_moves += self.moves(dirs)
+    def move_in_dir
+        HORIZONTAL_DIRS.each do |dirs|
+            @possible_moves += self.moves(dirs)
+        end
     end
+
+    def get_possible_moves
+        self.move_in_dir
+        return @possible_moves
+    end
+
 
     def symbol
         "♖"

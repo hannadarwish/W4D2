@@ -9,8 +9,19 @@ class Knight < Piece
         @possible_moves = []
     end
 
-    KNIGHT_DIRS.each do |dirs|
-        @possible_moves += dirs
+    def move_in_dir
+        KNIGHT_DIRS.each do |dirs|
+            @possible_moves += dirs
+        end
+    end
+
+    def get_possible_moves
+        self.move_in_dir
+        return @possible_moves
+    end
+    
+    def symbol
+        "♘"
     end
     
 

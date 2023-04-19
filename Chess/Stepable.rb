@@ -31,7 +31,7 @@ module Stepable
                 temp_moves << @pos
             end
         end
-        
+        return temp_moves
     end
 
 
