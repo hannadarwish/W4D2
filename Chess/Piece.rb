@@ -3,17 +3,17 @@ require_relative "Board"
 class Piece
 
     attr_reader :color, :board
-    def initialize(symbol, board, pos)
-        @color = symbol
+    def initialize(color, board, pos)
+        @color = color
         @board = board
         @pos = pos
     end
 
-    def to_s()
+    # def to_s()
     
-    end
+    # end
 
-    def valid_
+    # def valid_
 
 
 end

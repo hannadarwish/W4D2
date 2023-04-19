@@ -44,6 +44,6 @@ class Board
 
 end
 
-b = Board.new
-# b.move_piece(:B, [0, 0], [2, 1])
-p b.rows
+# b = Board.new
+# # b.move_piece(:B, [0, 0], [2, 1])
+# p b.rows
