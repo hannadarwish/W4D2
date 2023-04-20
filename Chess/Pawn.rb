@@ -70,7 +70,7 @@ class Pawn < Piece
     end
 
     def symbol
-        "♙"
+        "♙".colorize(color)
     end
 
 
